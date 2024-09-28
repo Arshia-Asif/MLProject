@@ -45,7 +45,6 @@ class DataTransformation:
                 ]
             )
 
-## categorical pipeline
             cat_pipeline=Pipeline(
 
                 steps=[
@@ -59,7 +58,6 @@ class DataTransformation:
             logging.info(f"Categorical columns: {categorical_columns}")
             logging.info(f"Numerical columns: {numerical_columns}")
 
-## combine numerical and categorical pipeline
             preprocessor=ColumnTransformer(
                 [
                 ("num_pipeline",num_pipeline,numerical_columns),
